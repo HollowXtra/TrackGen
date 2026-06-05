@@ -1,4 +1,8 @@
-## [TrackGen](https://trackgen.codingcactus.repl.co/) - The simplest tropical cyclone track map generator
+## Advanced Storm Inc TrackGen
+
+Advanced Storm Inc-only fork of [TrackGen](https://github.com/Track-Gen/TrackGen), the simple tropical cyclone track map generator.
+
+Generated maps are branded with an Advanced Storm Inc watermark, and the PWA metadata is scoped to this fork.
 
 ### Usage
 - Each line is a point to be plotted on the map

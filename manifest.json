@@ -1,16 +1,16 @@
 {
-    "name": "TrackGen",
-    "short_name": "TrackGen",
-    "start_url": "/index.html",
-    "scope": "/",
+    "name": "Advanced Storm Inc TrackGen",
+    "short_name": "ASI TrackGen",
+    "start_url": "index.html",
+    "scope": ".",
     "icons": [
         {
-            "src": "/static/media/favicon.png",
+            "src": "static/media/favicon.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/static/media/favicon.png",
+            "src": "static/media/favicon.png",
             "sizes": "512x512",
             "type": "image/png"
         }

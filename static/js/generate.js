@@ -42,6 +42,9 @@ document.querySelector("#close").addEventListener("click", () => {
     document.querySelector("#image-container").classList.add("hidden");
 });
 
+const APP_OWNER = "Advanced Storm Inc";
+const CACHE_NAME = "advanced-storm-inc-trackgen-v1";
+
 let loaded = false;
 const BLUE_MARBLE = new Image();
 BLUE_MARBLE.crossOrigin="anonymous";
@@ -60,7 +63,7 @@ setTimeout(() => {
                         const clone = response.clone()
                         response.blob()
                             .then(blob => {
-                                caches.open("cache-v4")
+                                caches.open(CACHE_NAME)
                                     .then(cache => {
                                         cache.put(MAP_URL, clone)
                                             .then(() => {
@@ -81,6 +84,33 @@ BLUE_MARBLE.onload = (e) => {
     loaded = true;
     loader.style.display = "none";
     document.querySelector("#map-indicator ion-icon").style.color = "#70c542";
+}
+
+function drawAdvancedStormIncWatermark(ctx, canvas) {
+    const label = APP_OWNER;
+    const padding = Math.max(10, Math.round(Math.min(canvas.width, canvas.height) * 0.015));
+    let fontSize = Math.max(14, Math.round(Math.min(canvas.width, canvas.height) * 0.035));
+
+    ctx.save();
+    ctx.textBaseline = "bottom";
+    ctx.font = `700 ${fontSize}px sans-serif`;
+
+    while (ctx.measureText(label).width > canvas.width - padding * 4 && fontSize > 10) {
+        fontSize -= 1;
+        ctx.font = `700 ${fontSize}px sans-serif`;
+    }
+
+    const metrics = ctx.measureText(label);
+    const boxWidth = metrics.width + padding * 2;
+    const boxHeight = fontSize + padding;
+    const x = padding;
+    const y = canvas.height - boxHeight - padding;
+
+    ctx.fillStyle = "rgba(0, 0, 0, 0.58)";
+    ctx.fillRect(x, y, boxWidth, boxHeight);
+    ctx.fillStyle = "rgba(255, 255, 255, 0.95)";
+    ctx.fillText(label, x + padding, canvas.height - padding * 1.45);
+    ctx.restore();
 }
 
 function createMap(data, accessible) {
@@ -221,6 +251,8 @@ function createMap(data, accessible) {
                         ctx.fill();
                     });
                 });
+
+                drawAdvancedStormIncWatermark(ctx, canvas);
         
                 const output = document.querySelector("#output");
                 output.innerHTML = "";

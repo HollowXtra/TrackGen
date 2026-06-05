@@ -3,10 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
-		<title>TrackGen</title>
+		<title>Advanced Storm Inc TrackGen</title>
+		<meta name="description" content="Advanced Storm Inc-only tropical cyclone track map generator.">
 		<link href="static/css/style.css" rel="stylesheet" type="text/css" />
-        <link href="/static/media/favicon.png" rel="icon" type="image/x-icon" />
-        <link rel="manifest" href="/manifest.json">
+        <link href="static/media/favicon.png" rel="icon" type="image/x-icon" />
+        <link rel="manifest" href="manifest.json">
 	</head>
 	<body>
     <div id="map-indicator">
@@ -20,7 +21,7 @@
     </div>
     
 		<main>			
-			<h1>TrackGen</h1>
+			<h1>Advanced Storm Inc TrackGen</h1>
 			<div id="input-type">
 				<button class="selected">Manual Input</button>
 				<button>BT File</button>
@@ -136,25 +137,25 @@
 		</main>
 
 		<div id="image-container" class="hidden">
-			<img id="loader" src="/static/media/cyclone.png" alt="loading">
+			<img id="loader" src="static/media/cyclone.png" alt="loading">
 			<img id="output" alt="generated track map" class="hidden" />
 			<button id="close">
 				<ion-icon name="close-outline"></ion-icon>
 			</button>
 		</div>
 
-        <script src="/static/js/sw.js"></script>        
-		<script src="/static/js/pages.js"></script>
-		<script src="/static/js/generate.js"></script>
-		<script src="/static/js/new_point.js"></script>
+        <script src="static/js/sw.js"></script>
+		<script src="static/js/pages.js"></script>
+		<script src="static/js/generate.js"></script>
+		<script src="static/js/new_point.js"></script>
 
-		<script src="/static/js/atcf.js"></script>
-		<script src="/static/js/rsmc.js"></script>
-		<script src="/static/js/hurdat.js"></script>
-		<script src="/static/js/ibtracs.js"></script>
-		<script src="/static/js/file_upload.js"></script>
+		<script src="static/js/atcf.js"></script>
+		<script src="static/js/rsmc.js"></script>
+		<script src="static/js/hurdat.js"></script>
+		<script src="static/js/ibtracs.js"></script>
+		<script src="static/js/file_upload.js"></script>
 
-		<script src="/static/js/manual_input.js"></script>
+		<script src="static/js/manual_input.js"></script>
 
 		<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 	</body>
