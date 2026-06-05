@@ -5,6 +5,8 @@ function mapFromFile(data, type, accessible) {
 		parsed = parseHurdat(data);
 	} else if (type === "atcf") {
 		parsed = parseAtcf(data);
+	} else if (type === "storm-inc-bt") {
+		parsed = parseAdvancedStormIncBt(data);
 	} else if (type === "ibtracs") {
 		parsed = parseIbtracs(data);
 	} else if (type === "rsmc") {

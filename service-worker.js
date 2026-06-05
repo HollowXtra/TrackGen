@@ -1,4 +1,4 @@
-const cacheName = "advanced-storm-inc-trackgen-v1";
+const cacheName = "advanced-storm-inc-trackgen-v2";
 
 self.addEventListener('install', e => {
     e.waitUntil(
@@ -19,6 +19,7 @@ self.addEventListener('install', e => {
                 "static/js/manual_input.js",
                 "static/js/generate.js",
                 "static/js/atcf.js",
+                "static/js/advanced_storm_inc.js",
                 "static/js/file_upload.js",
                 "static/css/style.css"
             ])

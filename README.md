@@ -4,6 +4,8 @@ Advanced Storm Inc-only fork of [TrackGen](https://github.com/Track-Gen/TrackGen
 
 Generated maps are branded with an Advanced Storm Inc watermark, and the PWA metadata is scoped to this fork.
 
+The BT file importer supports Advanced Storm Inc best-track text plus the JSON copied from the simulator's TrackGen button.
+
 ### Usage
 - Each line is a point to be plotted on the map
 - Each field gives information about the point to be plotted

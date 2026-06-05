@@ -43,7 +43,7 @@ document.querySelector("#close").addEventListener("click", () => {
 });
 
 const APP_OWNER = "Advanced Storm Inc";
-const CACHE_NAME = "advanced-storm-inc-trackgen-v1";
+const CACHE_NAME = "advanced-storm-inc-trackgen-v2";
 
 let loaded = false;
 const BLUE_MARBLE = new Image();
